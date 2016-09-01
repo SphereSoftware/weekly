@@ -23,7 +23,7 @@ class Issue
   end
 
   def name
-    'Rebel Weekly'
+    'Sphere Rebel Weekly'
   end
 
   def content

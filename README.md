@@ -1,4 +1,4 @@
-# Rebel Weekly
+# Sphere Rebel Weekly
 ----
 
 Список всех выпусков:
