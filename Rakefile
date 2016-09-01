@@ -84,9 +84,10 @@ task :test => :dotenv do
   end
 
   Mail.deliver do
+    # to 'all-employees@sphereinc.com'
     to 'ashemerey@sphereinc.com'
     from ENV['USERNAME']
-    from    "Rebel Weekly <#{ENV['USERNAME']}>"
+    from "Rebel Weekly <#{ENV['USERNAME']}>"
     subject "🌟 Rebel Weekly 🌟 ##{"%03d" % issue.id}"
 
     text_part do
