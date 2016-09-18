@@ -23,6 +23,9 @@
 
 ## JavaScrip & NodeJS
 
+* [Паттерны React](https://habrahabr.ru/post/309422/)
+<br /> Перевод [http://reactpatterns.com](https://morlay.github.io/react-patterns/en/) о том какие паттерны успели выделится в `React` comunity.
+
 * [IFRAME](https://vimeo.com/177103832)
 <br /> Все что вы хотели узнать про `iframe` но боялись спросить
 

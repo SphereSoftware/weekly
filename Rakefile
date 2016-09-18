@@ -14,8 +14,9 @@ end
 class Issue
   attr_reader :id
 
-  def initialize(id)
+  def initialize(id, clean = false)
     @id = id
+    @clean = clean
   end
 
   def url
@@ -51,23 +52,33 @@ class Issue
   end
 
   def email_template
-    ERB.new(File.open(File.dirname(__FILE__) + "/email.html.erb").readlines.join)
+    if clean?
+      ERB.new("<%= content %>")
+    else
+      ERB.new(File.open(File.dirname(__FILE__) + "/email.html.erb").readlines.join)
+    end
   end
 
   def markdown
     @md ||= Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
   end
 
+  def clean?
+    @clean
+  end
 end
 
-issue = Issue.new(1)
+CURRENT_ISSUE = 3
+
 
 task :show => :dotenv do
+  issue = Issue.new(CURRENT_ISSUE, true)
   File.open('/tmp/rebel-weekly.html', 'w') { |file| file.write(issue.html) }
   sh "open /tmp/rebel-weekly.html"
 end
 
 task :test => :dotenv do
+  issue = Issue.new(CURRENT_ISSUE)
 
   options = {
     :address              => "smtp.gmail.com",
