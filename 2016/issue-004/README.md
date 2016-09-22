@@ -44,13 +44,13 @@
 
 * [What every JavaScript developer should know about Unicode](https://rainsoft.io/what-every-javascript-developer-should-know-about-unicode/#1theideabehindunicode)<br/>
 Действительно неплохой обзор особенностей `Unicode` в `JS`, для тех кто хочет обновить знания о
-том как работает `UTF` под капотом рекомендовано к просмотру https://www.youtube.com/watch?v=MijmeoH9LT4
+том как работает `UTF` под капотом рекомендовано к просмотру [https://www.youtube.com/watch?v=MijmeoH9LT4](https://www.youtube.com/watch?v=MijmeoH9LT4)
 
 * [React Game Kit](https://github.com/FormidableLabs/react-game-kit)<br/>
 Библиотека компонентов для создания игр с в `React` и `React Native`
 
 * [Lebab](https://github.com/lebab/lebab) Это вам не `Babel`<br/>
-Превратите ваш код ES5 в читаемый ES6 .Делает противоположное тому, что делает Бабель. https://lebab.io/
+Превратите ваш код ES5 в читаемый ES6 .Делает противоположное тому, что делает Бабель.
 
 ## Geek, Tech, Hack, Science, Startups
 * [Cyber Dojo](http://cyber-dojo.org)<br/>
