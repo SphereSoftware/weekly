@@ -68,8 +68,7 @@ class Issue
   end
 end
 
-CURRENT_ISSUE = 3
-
+CURRENT_ISSUE = 4
 
 task :show => :dotenv do
   issue = Issue.new(CURRENT_ISSUE, true)
