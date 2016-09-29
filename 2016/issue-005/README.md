@@ -10,6 +10,9 @@
 
 ## Ruby & Ruby on Rails
 
+* [Concurrency in Ruby 3 with Guilds](http://olivierlacan.com/posts/concurrency-in-ruby-3-with-guilds)<br/>
+Статья по мотивам доклада `Koichi Sasada` о новой конкурентной модели в `Ruby 3`. 
+
 * [Be a better ruby backend developer – watch Java conferences](http://jaszczurowski.com/be-a-better-ruby-backend-developer-watch-java-conferences/)</br>
 Выходим из `Зоны комфорта` не стесняемся, подборка видео с конференций из мира `Java`
 
