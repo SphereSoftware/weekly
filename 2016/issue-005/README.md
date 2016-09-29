@@ -35,6 +35,9 @@
 * [4 must-know tips for building cross platform Electron apps](https://blog.avocode.com/blog/4-must-know-tips-for-building-cross-platform-electron-apps)<br/>
 Советы по созданию приложений на `Electron`
 
+* [Building the 2048 game in AngularJS](http://www.ng-newsletter.com/posts/building-2048-in-angularjs.html)<br/>
+Детальный туториал о том как запилить `2048` с использованием `Angular`
+
 * [CSSgram](https://github.com/una/CSSgram)<br/>
 `Instagram` фильтры на чистом css
 
