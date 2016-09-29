@@ -11,14 +11,14 @@
 ## Ruby & Ruby on Rails
 
 * [Be a better ruby backend developer – watch Java conferences](http://jaszczurowski.com/be-a-better-ruby-backend-developer-watch-java-conferences/)</br>
-Выходим из `Зоны камфорта` не стесняемся, подборка видео с конференций из мира `Java`
+Выходим из `Зоны комфорта` не стесняемся, подборка видео с конференций из мира `Java`
 
 * [How To Score Your Rails App's Complexity](http://www.railsinside.com/tutorials/487-how-to-score-your-rails-apps-complexity-before-refactoring.html)<br/>
-Старая но от того не менее ценная статья, можно использовать как источник доп информации при
+Старая, но от того не менее ценная статья, можно использовать как источник доп информации при
 сравнении разных подходов в решении задачи, помогает понять как и насколько меняется сложность приложения.
 
 * [Dynamic breaking points in Ruby](http://blog.iempire.ru/2016/09/23/breaking-points)<br/>
-Неплохой пример, как сделать `pry` по условию, наприем когда валится определенная валидация
+Неплохой пример, как сделать `pry` по условию, например когда валится определенная валидация
 
 * [Keep Ruby Code Smell-Free](https://www.codementor.io/ruby-on-rails/tutorial/check-my-code-tips-to-keep-ruby-codes-smell-free)
 
@@ -33,10 +33,12 @@
 ## JavaScript & NodeJS
 
 * [4 must-know tips for building cross platform Electron apps](https://blog.avocode.com/blog/4-must-know-tips-for-building-cross-platform-electron-apps)<br/>
-Саветы по созданию приложений на `Electron`
+Советы по созданию приложений на `Electron`
 
 * [CSSgram](https://github.com/una/CSSgram)<br/>
 `Instagram` фильтры на чистом css
+
+* [Testing Components in Angular 2 with Jasmine](https://semaphoreci.com/community/tutorials/testing-components-in-angular-2-with-jasmine)
 
 ## Geek, Tech, Hack, Science, Startups
 
@@ -57,6 +59,4 @@
 * [Version Control with Git Flow](https://www.driftingruby.com/episodes/version-control-with-git-flow)
 
 * [Writing a Tetris game in JavaScript](https://www.youtube.com/watch?v=H2aW5V46khA)<br/>
-Интересно а том как запилить тетрис на чистом JS + canvas за 50 минут, лучше смотреть на скорости 1.25 || 1.5  Он же снял видео: [Writing a Pong game in JavaScript](https://www.youtube.com/watch?v=ju09womACpQ) и [Rewriting Tetris to 2-Player](https://www.youtube.com/watch?v=JJo5JpbuTTs)
-
-## OffTopic
+Интересно о том, как запилить тетрис на чистом JS + canvas за 50 минут, лучше смотреть на скорости 1.25 || 1.5  Он же снял видео: [Writing a Pong game in JavaScript](https://www.youtube.com/watch?v=ju09womACpQ) и [Rewriting Tetris to 2-Player](https://www.youtube.com/watch?v=JJo5JpbuTTs)
