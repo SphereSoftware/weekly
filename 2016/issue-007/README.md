@@ -8,6 +8,7 @@
 поучаствовать. [Rebel Weekly](https://github.com/SphereConsultingInc/weekly)
 
 ---
+
 Dima Fedotov, Senior Ruby on Rails Developer, St Petersburg, will conduct our first talk on Wed, 19th of Oct 2016. You will receive more details about chat room directions next week.
 
 Topic: Clojure and React Native - the Best Duo for Mobile Development.
@@ -80,7 +81,7 @@ Dima will demonstrate how to use Clojure and React native together first by givi
 
 * [Vim anti-patterns](https://sanctum.geek.nz/arabesque/vim-anti-patterns/)
 
-* [кроссворды](https://tproger.ru/digest/regex-crosswords/) из регулярных выражений<br/>
+* [кроссворды](https://tproger.ru/digest/regex-crosswords/) из регулярных выражений.
 Да оказывается бывают и такие :)
 
 * [Что будет, если подать в электросеть постоянный ток](https://geektimes.ru/post/281306/)<br/>
@@ -100,4 +101,5 @@ Dima will demonstrate how to use Clojure and React native together first by givi
 
 * [Latency numbers every programmer should know](https://gist.github.com/hellerbarde/2843375)<br/>
 Очень наглядная табличка о том `куда уходит время`, наглядно демонстрирует стоимость различных взаимодействий с точки зрения затраченного на это времени.
+
 ----------------
