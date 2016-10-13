@@ -9,10 +9,10 @@
 
 ---
 
-Dima Fedotov, Senior Ruby on Rails Developer, St Petersburg, will conduct our first talk on Wed, 19th of Oct 2016. You will receive more details about chat room directions next week.
+Дима Федотов, Senior Ruby On Rails Developer, Санкт-Петербург, проведет наш первый Tech Talks в среду, 19 октября
 
-Topic: Clojure and React Native - the Best Duo for Mobile Development.
-Dima will demonstrate how to use Clojure and React native together first by giving information about these two technologies and sharing about his experience using them, and then by creating a simple application within 15 minutes.
+Тема: Clojure и React Native - лучший тандем для мобильных приложений.
+Дима сначала предоставит информацию об этих двух технологий и поделиться своим опытом их использования, а затем в течение 15 минут продемострирует как их использовать путем создания простого приложения
 
 ---
 
