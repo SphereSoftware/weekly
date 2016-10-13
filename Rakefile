@@ -68,7 +68,7 @@ class Issue
   end
 end
 
-CURRENT_ISSUE = 6
+CURRENT_ISSUE = 7
 
 task :show => :dotenv do
   issue = Issue.new(CURRENT_ISSUE, true)
