@@ -13,6 +13,7 @@
  * [Issue 005](/2016/issue-005/README.md)
  * [Issue 006](/2016/issue-006/README.md)
  * [Issue 007](/2016/issue-007/README.md)
+ * [Issue 008](/2016/issue-008/README.md)
 
 # Development
 
