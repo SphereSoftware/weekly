@@ -20,7 +20,7 @@ class Issue
   end
 
   def url
-    'https://github.com/SphereConsultingInc/weekly'
+    'https://github.com/SphereSoftware/weekly'
   end
 
   def name
