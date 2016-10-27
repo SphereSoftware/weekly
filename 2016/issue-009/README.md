@@ -20,10 +20,10 @@
 ## Ruby & Ruby on Rails
 
 * [Password-Less Authentication in Rails](https://www.sitepoint.com/password-less-authentication-in-rails/)<br/>
-Пример реализации безпорольной авторизации в `Ruby on Rails`
+Пример реализации безпарольной авторизации в `Ruby on Rails`
 
 * [Tracking SQL queries in Rails](http://stevenyue.com/blogs/tracking-sql-queries-in-rails/)<br/>
-Эта статья поможет вам быть в курсе того что происходит в `SQL` мире вашего приложения
+Эта статья поможет вам быть в курсе того, что происходит в `SQL` мире вашего приложения
 
 * [10 Modern Software Over-Engineering Mistakes](https://medium.com/@rdsubhas/10-modern-software-engineering-mistakes-bc67fbef4fc8#.lcflul10h)<br/>
 подборка типовых ошибок, врага нужно знать в лицо и уметь с ним бороться 💣
@@ -58,10 +58,10 @@
 * [30 ресурсов](http://theasder.github.io/learning/2016/01/21/where-can-I-find-programming-puzzles-and-challenges.html) с головоломками и задачами по программированию
 
 * [3 rules of a good pull request comment](https://medium.com/@yukas/how-to-write-good-pull-requests-comments-ce17ec3f5f36#.o5ywysdj4)<br/>
-Простой гайд о том как сделать ваш `PR` лучше
+Простой гайд о том, как сделать ваш `PR` лучше
 
 * [Marathono](http://www.marathono.com/)<br/>
-Неплохая программа для `macOS` которая предоставляет `GUI` для процессов в фоне.
+Неплохая программа для `macOS`, которая предоставляет `GUI` для процессов в фоне.
 
 * [Do You Speak Tar?](http://bfontaine.net/blog/2016/09/17/do-you-speak-tar/)<br/>
 `tar` это прекрастный инструмент, но его ключи всегда вылетают из головы, статья с примерами для тех кто всегда их забывает.
@@ -69,6 +69,6 @@
 * [When Is It Better to Use #!/bin/bash Instead of #!/bin/sh in a Shell Script?](http://www.howtogeek.com/276607/when-is-it-better-to-use-bin-bash-instead-of-bin-sh-in-a-shell-script/)
 
 * [Vim: So long Pathogen, hello native package loading](https://shapeshed.com/vim-packages/)<br/>
-Теперь в `Vim` 8 у нас есть новая, нативная поддержка сторонних плагинов.
+Теперь в `Vim` 8 у нас есть новая нативная поддержка сторонних плагинов.
 
 -----------------
