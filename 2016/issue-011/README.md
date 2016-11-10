@@ -58,6 +58,9 @@
 
 * Григорий Бакунов («Яндекс»): [«Азимову не снились реальные проблемы робототехники»](http://secretmag.ru/longread/2016/10/27/bobuk/)
 
+* [Perfection is an illusion, it’s pursuit is a pathology](https://rnelson0.com/2014/11/06/on-mentoring-perfection-is-an-illusion-its-pursuit-is-a-pathology/)<br/>
+Неплохая статья о проблема `перфекционизма`. Для тех кто интересуется этой проблемой и хочет разобраться в себе, можно почитать неплохую книгу [Парадокс перфекциониста](https://www.ozon.ru/context/detail/id/21893539/)
+
 ### Atom
 
 Подборка материалов по редактору `Atom`, для тех кто активно пользуется или всегда хотел попробовать этот замечательный редактор рожденный в недрах `Github` мы рады представить наш новый проект в рамках `Sphere Open Source Initiative` - [RebelChat](https://github.com/SphereSoftware/rebel-chat)
