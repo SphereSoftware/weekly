@@ -6,7 +6,7 @@
 Самое интересное и обсуждаемое на этой неделе в мире высокой моды на новые технологии.
 
 Это подборка так же представленна в виде `git` репозитория, в котором каждый может
-поучаствовать. [RebelWeekly](https://github.com/SphereConsultingInc/weekly)
+поучаствовать. [RebelWeekly](https://github.com/SphereSoftware/weekly)
 
 ## Ruby & Ruby on Rails
 

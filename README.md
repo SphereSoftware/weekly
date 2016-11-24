@@ -22,5 +22,5 @@
 # Development
 
 ```sh
-$ git clone https://github.com/SphereConsultingInc/weekly && cd weekly && bundle && rake
+$ git clone https://github.com/SphereSoftware/weekly && cd weekly && bundle && rake
 ```
