@@ -7,11 +7,12 @@
 Это подборка так же представлена в виде `git` [репозитория](https://github.com/SphereSoftware/weekly), в котором каждый может
 поучаствовать. [Rebel Weekly](https://github.com/SphereSoftware/weekly)
 
----
+-----
 `Oleg Kukareka`, 15 Декабря провел наш очередной Tech-Talk, Спасибо Олег 👏 Тема: *Intro to machine learning*
 
-Скачать видео и слайды вы может тут https://drive.google.com/drive/folders/0B2NaPqL1Y8oDUlN6SEpma1k3RUE
----
+Скачать видео и слайды вы может [тут](https://drive.google.com/drive/folders/0B2NaPqL1Y8oDUlN6SEpma1k3RUE)
+
+-----
 
 ## Ruby & Ruby on Rails
 
