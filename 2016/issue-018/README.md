@@ -5,7 +5,6 @@
 ---
 Всех с наступающими празниками :)
 
-
 Еженедельная подборка материалов от `Rebel Weekly`. Скандалы, Интриги, Расследования.
 Самое интересное и обсуждаемое на этой неделе в мире высокой моды на новые технологии.
 
@@ -57,6 +56,12 @@ Let's check whether you remember where Ruby ends and Rails starts
 * [Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/)
 
 ## Geek, Tech, Hack, Science, Startups
+
+* [Новогодний подарок 2017 :)](https://www.youtube.com/playlist?list=PLH-XmS0lSi_ztvZVxpvFz1esXTFkik6Yr)<br/>
+Плейлист с докладами HighLoad 2017
+
+* [Awesome Falsehood](https://github.com/kdeldycke/awesome-falsehood). <br />
+💊 Очередной `Awesome` лист о типичных заблуждениях программистов.
 
 * [Правда о традиционных JavaScript-бенчмарках](https://habrahabr.ru/company/mailru/blog/318282/)
 
