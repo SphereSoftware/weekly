@@ -1,1 +1,0 @@
-/Users/zork/Projects/Sphere/weekly/2016/issue-018/README.md
