@@ -42,6 +42,8 @@ Martin Fowler, о то м как рефакторить `JS`
 
 * [Portainer](https://media-glass.es/portainer-the-ui-for-docker-d067f6335f23#.cw3gx86uw) UI for Docker
 
+* [Build 30 things in vanilla JS](https://javascript30.com/)
+
 ## Geek, Tech, Hack, Science, Startups
 
 * [ручной пуск V6 двигателя](http://hackaday.com/2017/01/04/hand-cranked-generator-charges-supercaps-starts-car/)<br/>
