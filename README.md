@@ -32,6 +32,7 @@
  * [Issue 019](/2017/issue-019/README.md)
  * [Issue 020](/2017/issue-020/README.md)
  * [Issue 021](/2017/issue-021/README.md)
+ * [Issue 022](/2017/issue-022/README.md)
 
 # Development
 
