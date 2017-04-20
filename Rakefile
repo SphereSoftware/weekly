@@ -38,7 +38,11 @@ class Issue
     File.dirname(__FILE__) + "/#{Date.today.year}/issue-#{"%03d" % id}/README.md"
   end
 
-  def html
+  def index
+    index_template.result(binding)
+  end
+
+  def email
     email_template.result(binding)
   end
 
@@ -58,6 +62,10 @@ class Issue
 
   def source
     File.open(issue_file_path).readlines.join
+  end
+
+  def index_template
+      ERB.new(File.open(File.dirname(__FILE__) + "/issue.html.erb").readlines.join)
   end
 
   def email_template
@@ -110,8 +118,14 @@ end
 
 task :show => :dotenv do
   issue = Issue.new(current_issue, true)
-  File.open('/tmp/rebel-weekly.html', 'w') { |file| file.write(issue.html) }
+  File.open('/tmp/rebel-weekly.html', 'w') { |file| file.write(issue.email) }
   sh "open /tmp/rebel-weekly.html"
+end
+
+task :build => :dotenv do
+  issue = Issue.new(current_issue, true)
+  File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(issue.index) }
+  # sh "open /tmp/rebel-weekly.html"
 end
 
 task :test => :dotenv do
