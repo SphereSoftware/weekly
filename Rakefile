@@ -6,11 +6,6 @@ require 'ostruct'
 require 'redcarpet'
 require 'fileutils'
 
-class HTMLwithPygments < Redcarpet::Render::HTML
-  def block_code(code, language)
-    Pygments.highlight(code, lexer: language)
-  end
-end
 
 =begin
 class Issue
@@ -140,6 +135,17 @@ ISSUE_TEMPLATE = ERB.new(File.open(File.dirname(__FILE__) + "/issue.html.erb").r
 INDEX_TEMPLATE = ERB.new(File.open(File.dirname(__FILE__) + "/index.html.erb").readlines.join)
 ARCHIVE_TEMPLATE = ERB.new(File.open(File.dirname(__FILE__) + "/archives.html.erb").readlines.join)
 
+class HTMLwithPygments < Redcarpet::Render::HTML
+  def block_code(code, language)
+    Pygments.highlight(code, lexer: language)
+  end
+
+  def paragraph(text)
+    require 'pry'; binding.pry unless Thread.current[:request_store].object_id == $_current_request_id
+  end
+end
+
+
 class Issue
   attr_reader :path, :url, :year
   def initialize(path: path, url: url, year: year)
@@ -150,8 +156,8 @@ class Issue
 
   def build
     puts html
-    File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(html) }
-    system("open #{File.dirname(__FILE__)}/docs/index.html")
+    # File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(content) }
+    # system("open #{File.dirname(__FILE__)}/docs/index.html")
   end
 
   def content
@@ -162,6 +168,10 @@ class Issue
 
   def markdown
     @md ||= Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
+  end
+
+  def source
+    File.open(path).readlines.join
   end
 
   def html
