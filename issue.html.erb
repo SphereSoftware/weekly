@@ -7,8 +7,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 
   <title>REBEL WEEKLY</title>
 </head>
@@ -18,7 +18,7 @@
     <div class="container clearfix">
       <div class="logo">
         <a href="/">
-          <img src="img/rebel-weekly-logo-white.svg" width="133px" height="33px" alt="rebel-weekly-logo">
+          <img src="/img/rebel-weekly-logo-white.svg" width="133px" height="33px" alt="rebel-weekly-logo">
         </a>
       </div>
       <nav class="main-nav">
@@ -30,7 +30,7 @@
             </form>
           </li>
           <li class="search-item"><a href="#">Поиск</a></li>
-          <li class="active"><span>Последний выпуск</span></li>
+          <li class="active"><a href="/">Последний выпуск</a></li>
           <li><a href="/archive.html">Архив</a></li>
         </ul>
       </nav>
@@ -55,11 +55,13 @@
 
   <footer>
     <div class="container">
-      <picture>
-        <source  media="(min-width: 1440px)" srcset="img/rebel-weekly-logo-light/rebel-weekly-logo-light@3x.png">
-        <source media="(min-width: 1024px)" srcset="img/rebel-weekly-logo-light/rebel-weekly-logo-light@2x.png">
-        <img src="img/rebel-weekly-logo-light/rebel-weekly-logo-light.png" alt="rebel-weekly-light">
-      </picture>
+      <a href="/">
+        <picture>
+          <source  media="(min-width: 1440px)" srcset="/img/rebel-weekly-logo-light/rebel-weekly-logo-light@3x.png">
+          <source media="(min-width: 1024px)" srcset="/img/rebel-weekly-logo-light/rebel-weekly-logo-light@2x.png">
+          <img src="/img/rebel-weekly-logo-light/rebel-weekly-logo-light.png" alt="rebel-weekly-light">
+        </picture>
+      </a>
     </div>
   </footer>
 

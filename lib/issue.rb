@@ -17,8 +17,12 @@ class Issue
     url.split('-').last
   end
 
+  def data
+    @data ||= File.ctime(path)
+  end
+
   def inspect
-    {path: path, url: url, year: year, data: File.ctime(path), id: id, links: links}
+    {path: path, url: url, year: year, data: data, id: id, links: links}
   end
 
   def build
