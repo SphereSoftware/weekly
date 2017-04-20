@@ -1,0 +1,10 @@
+/*font-family: 'Baron Neue';*/
+@font-face {
+    font-family: 'Baron Neue';
+    src: local('Baron Neue Black'), local('BaronNeueBlack'),
+    url('../fonts/baron-neue/baronneueblack.woff2') format('woff2'),
+    url('../fonts/baron-neue/baronneueblack.woff') format('woff'),
+    url('../fonts/baron-neue/baronneueblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

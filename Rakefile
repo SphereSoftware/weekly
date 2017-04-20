@@ -1,17 +1,6 @@
-require 'dotenv/tasks'
-require 'erb'
-require 'mail'
-require 'rake'
-require 'ostruct'
-require 'redcarpet'
-require 'fileutils'
+require_relative "lib/all"
 
-class HTMLwithPygments < Redcarpet::Render::HTML
-  def block_code(code, language)
-    Pygments.highlight(code, lexer: language)
-  end
-end
-
+=begin
 class Issue
   attr_reader :id
 
@@ -38,7 +27,11 @@ class Issue
     File.dirname(__FILE__) + "/#{Date.today.year}/issue-#{"%03d" % id}/README.md"
   end
 
-  def html
+  def index
+    index_template.result(binding)
+  end
+
+  def email
     email_template.result(binding)
   end
 
@@ -58,6 +51,10 @@ class Issue
 
   def source
     File.open(issue_file_path).readlines.join
+  end
+
+  def index_template
+      ERB.new(File.open(File.dirname(__FILE__) + "/issue.html.erb").readlines.join)
   end
 
   def email_template
@@ -80,6 +77,7 @@ class Issue
     @clean
   end
 end
+=end
 
 def current_issue
   Dir['*/issue*'].last.split('-').last.to_i
@@ -110,43 +108,22 @@ end
 
 task :show => :dotenv do
   issue = Issue.new(current_issue, true)
-  File.open('/tmp/rebel-weekly.html', 'w') { |file| file.write(issue.html) }
+  File.open('/tmp/rebel-weekly.html', 'w') { |file| file.write(issue.email) }
   sh "open /tmp/rebel-weekly.html"
 end
 
-task :test => :dotenv do
-  issue = Issue.new(current_issue)
-
-  options = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => 'sphereinc.com',
-    :user_name            => ENV['USERNAME'],
-    :password             => ENV['PASSWORD'],
-    :authentication       => 'plain',
-    :enable_starttls_auto => true
-  }
-
-  Mail.defaults do
-    delivery_method :smtp, options
-  end
-
-  Mail.deliver do
-    # to 'all-employees@sphereinc.com'
-    to 'ashemerey@sphereinc.com'
-    from ENV['USERNAME']
-    from "Rebel Weekly <#{ENV['USERNAME']}>"
-    subject "🌟 Rebel Weekly 🌟 ##{"%03d" % issue.id}"
-
-    text_part do
-      body issue.text
-    end
-
-    html_part do
-      content_type 'text/html; charset=UTF-8'
-      body issue.html
-    end
-  end
+task :build => :dotenv do
+  Weekly.new(current_issue).build
 end
 
-task default: %w[show]
+
+task default: %w[build]
+
+class Redcarpet::Markdown
+  attr_accessor :issue_object
+
+  def new_render(src)
+    @renderer.issue_object = issue_object
+    render(src)
+  end
+end

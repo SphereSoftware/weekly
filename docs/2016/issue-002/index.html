@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <title>REBEL WEEKLY</title>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container clearfix">
+      <div class="logo">
+        <a href="/">
+          <img src="/img/rebel-weekly-logo-white.svg" width="133px" height="33px" alt="rebel-weekly-logo">
+        </a>
+      </div>
+      <nav class="main-nav">
+
+        <ul>
+          <li class="search-block">
+            <form action="" method="get">
+              <input class="search" type="search" name="search">
+            </form>
+          </li>
+          <li class="search-item"><a href="#">Поиск</a></li>
+          <li class="active"><a href="/">Последний выпуск</a></li>
+          <li><a href="/archive.html">Архив</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="subscribe-block container">
+      <form class="subscribe-form" action="" method="get">
+        <input class="field-email" type="text" name="subscribe" placeholder="Введи свой e-mail…">
+        <button class="btn" type="submit" name="button">Подписаться</button>
+      </form>
+      <div class="subscribe-content">
+        <span>Один <b>e-mail</b> каждый <b>Четверг</b>.</span>
+        <span>Никакого спама — твой e-mail в полной безопасности</span>
+        <span>Курируется <b>Антоном Шемереем</b></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+          <div class="title-item">
+        <h1>Sphere Rebel Weekly #002</h1>
+      </div>
+
+<hr>
+Еженедельная подборка материалов от <code>Rebel Weekly</code>. Скандалы, Интриги, Расследования.
+Самое интересное и обсуждаемое на этой неделе в мире высокой моды на новые технологии.Это подборка так же представлена в виде <code>git</code> <a href="https://github.com/SphereSoftware/weekly">репозитория</a>, в котором каждый может
+поучаствовать. <a href="https://github.com/SphereSoftware/weekly">Rebel Weekly</a>      <h2>Ruby &amp; Ruby on Rails</h2>
+
+<ul>
+<li><a href="http://chrisseaton.com/rubytruffle/deoptimizing/">Deoptimizing Ruby</a> and <a href="https://github.com/ruby/ruby/pull/1419">PR</a>
+<br /> Деоптимизации в руби</li><li><a href="http://www.rubypigeon.com/posts/examining-internals-of-rails-request-response-cycle/">Examining The Internals Of The Rails Request/Response Cycle</a>
+<br /> Статья о том как устроен цикл обработки запросов в рельсе, ничего нового в статье нет, для тех кто в теме можно не читать.</li><li><a href="http://blog.bigbinary.com/2016/09/02/rails-5-silences-assets-logs-in-development-mode-by-default.html">quiet_assets is part of Rails 5</a>
+<br /> Теперь можно выключить назойливый лог ассетов прямо в конфиге</li><li><a href="https://medium.com/software-sandwich/how-elixir-helped-us-to-scale-our-video-user-profile-service-for-the-olympics-dd7fbba1ad4e#.253gahkmb">How Elixir helped us scale our Video User Profile Service for the Olympics</a>
+<br />Успешный опыт применения <code>elixir</code> на олимпиаде.</li></ul>
+      <h2>JavaScrip &amp; NodeJS</h2>
+
+<ul>
+<li><a href="https://habrahabr.ru/post/309422/">Паттерны React</a>
+<br /> Перевод <a href="https://morlay.github.io/react-patterns/en/">http://reactpatterns.com</a> о том какие паттерны успели выделится в <code>React</code> comunity.</li><li><a href="https://vimeo.com/177103832">IFRAME</a>
+<br /> Все что вы хотели узнать про <code>iframe</code> но боялись спросить</li><li><a href="http://blog.getstream.io/react-redux-best-practices-gotchas/">React/Redux – Best Practices &amp; Gotchas</a>
+<br /> React/Redux на марше, статья о личном опыте автора. Всегда интересно взглянуть на чужой опыт</li><li><a href="https://medium.com/@satya164/supercharged-javascript-development-in-atom-ea034e22eabc#.fm3yoxkkx">Supercharge JavaScript development in Atom</a>
+<br/> Статья о том как засетапить ваш <code>Atom</code> под интенсивную <code>js</code> разработку</li><li><a href="https://js.coach/">JS.coach</a>
+<br /> Очень удобный поисковик по компонентам для <code>React</code>, <code>Babel</code>, <code>Webpack</code> etc.</li></ul>
+      <h2>Geek, Tech, Hack, Science, Startups</h2>
+
+<ul>
+<li><a href="https://medium.freecodecamp.com/coding-explained-in-25-profound-comics-8847ea03819c#.6l85xstam">Coding Explained in 25 Profound Comics</a>
+<br /> Смешные комиксы из жизни девелоперов :)</li><li><a href="https://medium.freecodecamp.com/youre-asked-to-make-a-fix-e156b802ad92#.ig9o9ulb8">So a product manager asks you to fix a bug…</a>
+<br /> Еще одна история из жизни :) в стиле <code>не было печали апдейтов накачали</code></li><li><a href="http://meta.stackexchange.com/questions/66377/what-is-the-xy-problem/66378">XY problem</a>
+<br /> Описание классической ловушки новичков, и пример решения. В следующий раз вместо <code>RTFM</code> можно будет указывать ссылку на <code>XY problem</code></li><li>Немного новостей из мира <code>RegExp</code>
+<br />Статья о том как писать <a href="https://www.leighhalliday.com/named-captures-ruby-regular-expressions">именованные регекспы</a>  в руби
+<br /><a href="https://regex101.com/">Ресурс</a> для визуализации регекспов
+<br />Лонгрид про <a href="http://arxiv.org/pdf/1608.03000v1.pdf">Нейронки и Регулярки</a>  в натуральных языке (осторожно Science)</li><li><a href="http://tonsky.livejournal.com/308320.html">Голые короли IT</a>
+<br /> Философские размышления с высока прожитых лет, о том как <code>hype</code> мешает нам в повседневной жизни</li><li><a href="http://bouk.co/blog/hacking-developers/">How to steal any developer&#39;s local database</a>
+<br /> Хороший пример того как даже сапожник может остаться без сапог :)</li><li><a href="https://github.com/FallibleInc/security-guide-for-developers">Security Guide for Developers</a>
+<br /> Живой чек лист того о чем нужно подумать перед тем как выходить в прод, настоятельно рекомендуется перед релизом</li></ul>
+      <h2>Video, Books, Education etc.</h2>
+
+<ul>
+<li><a href="https://github.com/heynickc/awesome-ddd">Awesome DDD</a>
+<br />Почти как <code>TDD</code> и <code>DDT</code>, только круче. Очередной <code>AWESOME</code> лист с прекрасной подборкой
+материалов о том как больше &quot;думать&quot; и меньше &quot;жмякать&quot;</li><li><a href="https://www.youtube.com/watch?v=kUfF2MTnqAw">Why You Should Put YOUR MASK On First</a>
+<br />Очень хороший видос о том почему нужно одевать маску вначале себе а потом думать о детях и женах. Как говорится <code>Safety First</code></li><li>Make a Mini  <a href="https://www.youtube.com/watch?v=uKmGVNs_y7o">Plasma Cutter </a> / How To Make a  <a href="https://www.youtube.com/watch?v=gGKt_jiyM8c">Plasma Pen</a>
+<br />Интересные видосы о том как попользовать плазменный разряд в домашних условиях</li></ul>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="/">
+        <picture>
+          <source  media="(min-width: 1440px)" srcset="/img/rebel-weekly-logo-light/rebel-weekly-logo-light@3x.png">
+          <source media="(min-width: 1024px)" srcset="/img/rebel-weekly-logo-light/rebel-weekly-logo-light@2x.png">
+          <img src="/img/rebel-weekly-logo-light/rebel-weekly-logo-light.png" alt="rebel-weekly-light">
+        </picture>
+      </a>
+    </div>
+  </footer>
+
+  <div class="overlay">
+    <div class="modal-subscribing">
+      <img src="img/rebel-weekly-blue.png" width="172px" height="42px" alt="rebel-weekly-blue">
+      <span>Спасибо, что подписался на нашу рассылку.</span>
+      <span>Будет интересно!</span>
+      <a href="/" class="btn-back">Назад</a>
+    </div>
+  </div>
+</body>
+</html>

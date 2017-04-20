@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <title>REBEL WEEKLY</title>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container clearfix">
+      <div class="logo">
+        <a href="/">
+          <img src="/img/rebel-weekly-logo-white.svg" width="133px" height="33px" alt="rebel-weekly-logo">
+        </a>
+      </div>
+      <nav class="main-nav">
+
+        <ul>
+          <li class="search-block">
+            <form action="" method="get">
+              <input class="search" type="search" name="search">
+            </form>
+          </li>
+          <li class="search-item"><a href="#">Поиск</a></li>
+          <li><a href="/archive.html">Архив</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="subscribe-block container">
+      <form class="subscribe-form" action="" method="get">
+        <input class="field-email" type="text" name="subscribe" placeholder="Введи свой e-mail…">
+        <button class="btn" type="submit" name="button">Подписаться</button>
+      </form>
+      <div class="subscribe-content">
+        <span>Один <b>e-mail</b> каждый <b>Четверг</b>.</span>
+        <span>Никакого спама — твой e-mail в полной безопасности</span>
+        <span>Курируется <b>Антоном Шемереем</b></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <%= content %>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="/">
+        <picture>
+          <source  media="(min-width: 1440px)" srcset="/img/rebel-weekly-logo-light/rebel-weekly-logo-light@3x.png">
+          <source media="(min-width: 1024px)" srcset="/img/rebel-weekly-logo-light/rebel-weekly-logo-light@2x.png">
+          <img src="/img/rebel-weekly-logo-light/rebel-weekly-logo-light.png" alt="rebel-weekly-light">
+        </picture>
+      </a>
+    </div>
+  </footer>
+
+  <div class="overlay">
+    <div class="modal-subscribing">
+      <img src="/img/rebel-weekly-blue.png" width="172px" height="42px" alt="rebel-weekly-blue">
+      <span>Спасибо, что подписался на нашу рассылку.</span>
+      <span>Будет интересно!</span>
+    </div>
+  </div>
+</body>
+</html>
