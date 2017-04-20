@@ -140,8 +140,22 @@ class HTMLwithPygments < Redcarpet::Render::HTML
     Pygments.highlight(code, lexer: language)
   end
 
+  def header(text, header_level)
+    if header_level == 1
+      <<-HTML
+      <div class="title-item">
+        <h1>#{text}</h1>
+      </div>
+      HTML
+    else
+      <<-HTMLW
+      <h#{header_level}>#{text}</h#{header_level}>
+      HTMLW
+    end
+  end
+
   def paragraph(text)
-    require 'pry'; binding.pry unless Thread.current[:request_store].object_id == $_current_request_id
+    text
   end
 end
 
@@ -154,10 +168,15 @@ class Issue
     @year = year
   end
 
+  def build_index
+    File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(index_html) }
+  end
+
   def build
-    puts html
-    # File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(content) }
-    # system("open #{File.dirname(__FILE__)}/docs/index.html")
+    FileUtils.mkdir_p "#{File.dirname(__FILE__)}/docs/#{url}/"
+    File.open("#{File.dirname(__FILE__)}/docs/#{url}/index.html", 'w') { |file| file.write(html) }
+    puts url
+    # system("open #{File.dirname(__FILE__)}/docs/#{url}/index.html")
   end
 
   def content
@@ -172,6 +191,10 @@ class Issue
 
   def source
     File.open(path).readlines.join
+  end
+
+  def index_html
+    INDEX_TEMPLATE.result(binding)
   end
 
   def html
@@ -199,7 +222,7 @@ class Weekly
   end
 
   def build
-    # puts all.map(&:build)
-    puts all.first.build
+    all.map(&:build)
+    all.last.build_index
   end
 end
