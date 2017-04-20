@@ -12,6 +12,7 @@ class HTMLwithPygments < Redcarpet::Render::HTML
   end
 end
 
+=begin
 class Issue
   attr_reader :id
 
@@ -88,6 +89,7 @@ class Issue
     @clean
   end
 end
+=end
 
 def current_issue
   Dir['*/issue*'].last.split('-').last.to_i
@@ -123,44 +125,71 @@ task :show => :dotenv do
 end
 
 task :build => :dotenv do
-  issue = Issue.new(current_issue, true)
-  File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(issue.index) }
+  weekly = Weekly.new(current_issue)
+  weekly.build
+  # issue = Issue.new(current_issue, true)
+  # issue.build
+  # File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(issue.index) }
   # sh "open /tmp/rebel-weekly.html"
 end
 
-task :test => :dotenv do
-  issue = Issue.new(current_issue)
 
-  options = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => 'sphereinc.com',
-    :user_name            => ENV['USERNAME'],
-    :password             => ENV['PASSWORD'],
-    :authentication       => 'plain',
-    :enable_starttls_auto => true
-  }
+task default: %w[build]
 
-  Mail.defaults do
-    delivery_method :smtp, options
+ISSUE_TEMPLATE = ERB.new(File.open(File.dirname(__FILE__) + "/issue.html.erb").readlines.join)
+INDEX_TEMPLATE = ERB.new(File.open(File.dirname(__FILE__) + "/index.html.erb").readlines.join)
+ARCHIVE_TEMPLATE = ERB.new(File.open(File.dirname(__FILE__) + "/archives.html.erb").readlines.join)
+
+class Issue
+  attr_reader :path, :url, :year
+  def initialize(path: path, url: url, year: year)
+    @path = path
+    @url = url
+    @year = year
   end
 
-  Mail.deliver do
-    # to 'all-employees@sphereinc.com'
-    to 'ashemerey@sphereinc.com'
-    from ENV['USERNAME']
-    from "Rebel Weekly <#{ENV['USERNAME']}>"
-    subject "🌟 Rebel Weekly 🌟 ##{"%03d" % issue.id}"
+  def build
+    puts html
+    File.open("#{File.dirname(__FILE__)}/docs/index.html", 'w') { |file| file.write(html) }
+    system("open #{File.dirname(__FILE__)}/docs/index.html")
+  end
 
-    text_part do
-      body issue.text
+  def content
+    @issue_content ||= begin
+      markdown.render(source)
     end
+  end
 
-    html_part do
-      content_type 'text/html; charset=UTF-8'
-      body issue.html
-    end
+  def markdown
+    @md ||= Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
+  end
+
+  def html
+    ISSUE_TEMPLATE.result(binding)
   end
 end
 
-task default: %w[show]
+class Weekly
+  attr_reader :current_issue
+
+  def initialize(current_issue)
+    @current_issue = current_issue
+  end
+
+  def all
+    Dir[File.dirname(__FILE__) + "/{2016,2017,2018,2019}/**/*.md"].map do |path|
+      url = path.
+        gsub(File.dirname(__FILE__), "").
+        gsub("/README.md", "")
+
+      year = url.split('/')[1]
+
+      Issue.new(path: path, url: url, year: year)
+    end
+  end
+
+  def build
+    # puts all.map(&:build)
+    puts all.first.build
+  end
+end
