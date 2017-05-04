@@ -1,7 +1,22 @@
 require_relative "lib/all"
 
-=begin
-class Issue
+class Redcarpet::Markdown
+  attr_accessor :issue_object
+
+  def new_render(src)
+    @renderer.issue_object = issue_object
+    render(src)
+  end
+end
+
+class HTMLwithPygments < Redcarpet::Render::HTML
+  def block_code(code, language)
+    Pygments.highlight(code, lexer: language)
+  end
+end
+
+
+class OldIssue
   attr_reader :id
 
   def initialize(id, clean = false)
@@ -77,15 +92,14 @@ class Issue
     @clean
   end
 end
-=end
 
 def current_issue
-  Dir['*/issue*'].last.split('-').last.to_i
+  Dir["#{Date.today.year}/issue*"].last.split('-').last.to_i
 end
 
 task :new => :dotenv do
   next_issue_number = current_issue + 1
-  issue = Issue.new(next_issue_number, true)
+  issue = OldIssue.new(next_issue_number, true)
 
   # create directory is needed
   unless File.directory?(issue.dir_path)
@@ -107,7 +121,7 @@ task :new => :dotenv do
 end
 
 task :show => :dotenv do
-  issue = Issue.new(current_issue, true)
+  issue = OldIssue.new(current_issue, true)
   File.open('/tmp/rebel-weekly.html', 'w') { |file| file.write(issue.email) }
   sh "open /tmp/rebel-weekly.html"
 end
@@ -116,14 +130,4 @@ task :build => :dotenv do
   Weekly.new(current_issue).build
 end
 
-
-task default: %w[build]
-
-class Redcarpet::Markdown
-  attr_accessor :issue_object
-
-  def new_render(src)
-    @renderer.issue_object = issue_object
-    render(src)
-  end
-end
+task default: %w[show]
