@@ -1,1 +1,1 @@
-/Users/zork/Projects/Sphere/weekly/2017/issue-031/README.md
+2017/issue-032/README.md
